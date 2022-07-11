@@ -2,6 +2,8 @@ version: "3"
 services:
   reportcard:
     build: .
+    read_only: true
+    tmpfs: /reportcard/reports
     restart: always
     ports:
       - "127.0.0.1:8080:8080"
